@@ -1,0 +1,22 @@
+﻿<Window x:Class="Engima_Machine_Emulator.Connection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Engima_Machine_Emulator"
+        mc:Ignorable="d"
+        Title="Connection" Height="167.635" Width="350" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btn_connect" Content="Connect" HorizontalAlignment="Left" Margin="229,101,0,0" VerticalAlignment="Top" Width="75" Click="btn_connect_Click"/>
+        <Button x:Name="btn_connect_Copy" Content="Cancel" HorizontalAlignment="Left" Margin="108,101,0,0" VerticalAlignment="Top" Width="75" Click="btn_connect_Copy_Click"/>
+        <TextBox x:Name="txt_IP" HorizontalAlignment="Left" Height="20" Margin="52,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
+        <Label Content="IP:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,44,0,0" Width="23"/>
+        <Label Content="Enter an IP address in the textbox below and click connect." HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_status" Content="Connected" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,70,0,0" Width="67" Background="White" Foreground="Lime" Visibility="Hidden"/>
+        <Label x:Name="lbl_status2" Content="Error: Could not connect Invalid IP." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="89,70,0,0" Width="215" Background="White" Foreground="#FFFB0000" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
