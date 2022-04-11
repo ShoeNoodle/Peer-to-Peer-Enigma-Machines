@@ -1,0 +1,275 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:Engima_Machine_Emulator"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Engima_Machine_Emulator.MainWindow"
+        mc:Ignorable="d"
+        Title="Enigma Machine Emulator" Height="1080" Width="1980">
+    <Controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <!-- Accent and AppTheme setting -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Controls:MetroWindow.Resources>
+    <Grid Margin="0,0,2,-3" Height="1052" VerticalAlignment="Top">
+        <Grid.Background>
+            <ImageBrush ImageSource="wood-texture-plank-grain-background-wooden-desk-table-floor-old-striped-timber-board-furniture.jpeg"/>
+        </Grid.Background>
+
+
+        <Rectangle Fill="#FF535353" HorizontalAlignment="Left" Height="267" Margin="612,727,0,0" Stroke="Black" VerticalAlignment="Top" Width="638"/>
+
+
+        <Rectangle Fill="#FF535353" HorizontalAlignment="Left" Height="267" Margin="612,461,0,0" Stroke="Black" VerticalAlignment="Top" Width="638"/>
+
+
+        <Rectangle Fill="#FF535353" HorizontalAlignment="Left" Height="148" Margin="612,48,0,0" Stroke="Black" VerticalAlignment="Top" Width="638"/>
+
+
+        <Rectangle Fill="#FF535353" HorizontalAlignment="Left" Height="267" Margin="612,195,0,0" Stroke="Black" VerticalAlignment="Top" Width="638"/>
+
+
+        <Button Content="A" HorizontalAlignment="Left" Margin="656,566,0,0" VerticalAlignment="Top" Width="38" Click="btn_press_a" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="B" HorizontalAlignment="Left" Margin="950,652,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_b" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="C" HorizontalAlignment="Left" Margin="820,652,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_c" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="D" HorizontalAlignment="Left" Margin="786,566,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_d" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.211,-0.984" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button x:Name="btn_e" Content="E" HorizontalAlignment="Left" Margin="752,475,0,0" VerticalAlignment="Top" Width="36" Click="btn_press_e" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="F" HorizontalAlignment="Left" Margin="848,566,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_f" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="G" HorizontalAlignment="Left" Margin="916,566,0,0" VerticalAlignment="Top" Width="35" Click="btn_press_g" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="H" HorizontalAlignment="Left" Margin="981,566,0,0" VerticalAlignment="Top" Width="35" Click="btn_press_h" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="I" HorizontalAlignment="Left" Margin="1075,475,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_i" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="J" HorizontalAlignment="Left" Margin="1044,566,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_j" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="K" HorizontalAlignment="Left" Margin="1109,566,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_k" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="L" HorizontalAlignment="Left" Margin="1174,566,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_l" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="M" HorizontalAlignment="Left" Margin="1079,652,0,0" VerticalAlignment="Top" Width="36" Click="btn_press_m" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="N" HorizontalAlignment="Left" Margin="1015,652,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_n" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="O" HorizontalAlignment="Left" Margin="1140,475,0,0" VerticalAlignment="Top" Width="35" Click="btn_press_o" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="P" HorizontalAlignment="Left" Margin="1204,475,0,0" VerticalAlignment="Top" Width="36" Click="btn_press_p" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button x:Name="btn_kboard_Q" Content="Q" HorizontalAlignment="Left" Margin="622,475,0,0" VerticalAlignment="Top" Width="38" Click="btn_press_q" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button x:Name="btn_r" Content="R" HorizontalAlignment="Left" Margin="814,475,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_r" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="S" HorizontalAlignment="Left" Margin="721,566,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_s" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button x:Name="btn_t" Content="T" HorizontalAlignment="Left" Margin="880,475,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_t" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button x:Name="btn_u" Content="U" HorizontalAlignment="Left" Margin="1010,475,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_u" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="V" HorizontalAlignment="Left" Margin="883,652,0,0" VerticalAlignment="Top" Width="36" Click="btn_press_v" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button x:Name="btn_w" Content="W" HorizontalAlignment="Left" Margin="687,475,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_w" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="X" HorizontalAlignment="Left" Margin="755,652,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_x" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button x:Name="btn_y" Content="Y" HorizontalAlignment="Left" Margin="945,475,0,0" VerticalAlignment="Top" Width="37" Click="btn_press_y" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button Content="Z" HorizontalAlignment="Left" Margin="692,652,0,0" VerticalAlignment="Top" Width="35" Click="btn_press_z" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Background="Black" FontWeight="Bold" Foreground="White" BorderBrush="#FFB0B0B0" BorderThickness="3,3,5,3" FontSize="14" />
+        <Button x:Name="btn_rotor_up" Content="▲" HorizontalAlignment="Left" Margin="896,94,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="btn_rtr1_up"/>
+        <Button x:Name="btn_rotor_down" Content="▼" HorizontalAlignment="Left" Margin="896,148,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="btn_rtr1_down"/>
+        <Button x:Name="btn_rotor2_up" Content="▲" HorizontalAlignment="Left" Margin="1033,94,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="btn_rtr2_up"/>
+        <Button x:Name="btn_rotor2_down" Content="▼" HorizontalAlignment="Left" Margin="1033,148,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="btn_rtr2_down"/>
+        <Button x:Name="btn_rotor3_up" Content="▲" HorizontalAlignment="Left" Margin="1166,94,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="btn_rtr3_up"/>
+        <Button x:Name="btn_rotor3_down" Content="▼" HorizontalAlignment="Left" Margin="1166,148,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="btn_rtr3_down"/>
+        <Rectangle HorizontalAlignment="Left" Height="633" Margin="1381,419,0,0" Stroke="Black" VerticalAlignment="Top" Width="589">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="vintage paper.jpg" TileMode="Tile"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="btn_lighta" Content="A" HorizontalAlignment="Left" Margin="656,306,0,0" VerticalAlignment="Top" Width="38" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" Click="btn_lighta_Click" />
+        <Button x:Name="btn_lightb" Content="B" HorizontalAlignment="Left" Margin="950,392,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightc" Content="C" HorizontalAlignment="Left" Margin="820,392,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightd" Content="D" HorizontalAlignment="Left" Margin="786,306,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.211,-0.984" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lighte" Content="E" HorizontalAlignment="Left" Margin="752,215,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightf" Content="F" HorizontalAlignment="Left" Margin="848,306,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightg" Content="G" HorizontalAlignment="Left" Margin="916,306,0,0" VerticalAlignment="Top" Width="35" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lighth" Content="H" HorizontalAlignment="Left" Margin="981,306,0,0" VerticalAlignment="Top" Width="35" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lighti" Content="I" HorizontalAlignment="Left" Margin="1075,215,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightj" Content="J" HorizontalAlignment="Left" Margin="1044,306,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightk" Content="K" HorizontalAlignment="Left" Margin="1109,306,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightl" Content="L" HorizontalAlignment="Left" Margin="1174,306,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightm" Content="M" HorizontalAlignment="Left" Margin="1079,392,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightn" Content="N" HorizontalAlignment="Left" Margin="1015,392,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lighto" Content="O" HorizontalAlignment="Left" Margin="1140,215,0,0" VerticalAlignment="Top" Width="35" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightp" Content="P" HorizontalAlignment="Left" Margin="1204,215,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightq" Content="Q" HorizontalAlignment="Left" Margin="622,215,0,0" VerticalAlignment="Top" Width="38" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightr" Content="R" HorizontalAlignment="Left" Margin="814,215,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lights" Content="S" HorizontalAlignment="Left" Margin="721,306,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightt" Content="T" HorizontalAlignment="Left" Margin="880,215,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightu" Content="U" HorizontalAlignment="Left" Margin="1010,215,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightv" Content="V" HorizontalAlignment="Left" Margin="883,392,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightw" Content="W" HorizontalAlignment="Left" Margin="687,215,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightx" Content="X" HorizontalAlignment="Left" Margin="755,392,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lighty" Content="Y" HorizontalAlignment="Left" Margin="945,215,0,0" VerticalAlignment="Top" Width="37" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="39" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <Button x:Name="btn_lightz" Content="Z" HorizontalAlignment="Left" Margin="692,392,0,0" VerticalAlignment="Top" Width="35" Style="{DynamicResource MahApps.Styles.Button.Circle}" Height="40" RenderTransformOrigin="0.5,0.5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" IsEnabled="False" FontSize="14" FontWeight="Bold" Background="#FF747474" />
+        <TextBox x:Name="txt_message" HorizontalAlignment="Left" Height="35" Margin="1502,584,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="436" FontSize="18" FontWeight="Bold" IsReadOnly="True" MaxLines="1" Foreground="Black" IsEnabled="False" TextChanged="txt_message_TextChanged">
+            <TextBox.SelectionBrush>
+                <ImageBrush/>
+            </TextBox.SelectionBrush>
+            <TextBox.CaretBrush>
+                <ImageBrush/>
+            </TextBox.CaretBrush>
+            <TextBox.BorderBrush>
+                <ImageBrush/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lbl_message" Content="Message:" HorizontalAlignment="Left" Margin="1402,584,0,0" VerticalAlignment="Top" Width="99" Foreground="Black" FontSize="20" FontWeight="Bold" FontFamily="Franklin Gothic Demi"/>
+        <TextBox x:Name="txt_morse" HorizontalAlignment="Left" Height="35" Margin="1525,642,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="413" FontSize="18" FontWeight="Bold" IsReadOnly="True" MaxLines="1" Foreground="Black" IsEnabled="False">
+            <TextBox.SelectionBrush>
+                <ImageBrush/>
+            </TextBox.SelectionBrush>
+            <TextBox.CaretBrush>
+                <ImageBrush/>
+            </TextBox.CaretBrush>
+            <TextBox.BorderBrush>
+                <ImageBrush/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lbl_morse" Content="Morse Code:" HorizontalAlignment="Left" Margin="1402,642,0,0" VerticalAlignment="Top" Width="118" Foreground="Black" FontSize="20" FontWeight="Bold" FontFamily="Franklin Gothic Demi"/>
+        <ComboBox x:Name="cmb_reflector" HorizontalAlignment="Left" Margin="642,67,0,0" VerticalAlignment="Top" Width="158" FontSize="16" SelectedIndex="0" IsSynchronizedWithCurrentItem="True" HorizontalContentAlignment="Center">
+            <ComboBoxItem Content="UKW-A" HorizontalContentAlignment="Center"/>
+            <ComboBoxItem Content="UKW-B" HorizontalContentAlignment="Center"/>
+            <ComboBoxItem Content="UKW-C" HorizontalContentAlignment="Center"/>
+        </ComboBox>
+        <TextBox x:Name="txt_rotor3" HorizontalAlignment="Left" Height="35" Margin="1124,116,0,0" TextWrapping="Wrap" Text="A" VerticalAlignment="Top" Width="24" Background="Black" Foreground="White" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" CaretBrush="{x:Null}" FontSize="16" IsEnabled="False"/>
+        <TextBox x:Name="txt_rotor2" HorizontalAlignment="Left" Height="35" Margin="992,116,0,0" TextWrapping="Wrap" Text="A" VerticalAlignment="Top" Width="24" Foreground="White" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" CaretBrush="{x:Null}" FontSize="15" IsEnabled="False" Background="Black"/>
+        <TextBox x:Name="txt_rotor1" HorizontalAlignment="Left" Height="35" Margin="861,116,0,0" TextWrapping="Wrap" Text="A" VerticalAlignment="Top" Width="24" Background="Black" Foreground="White" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" CaretBrush="{x:Null}" FontSize="16" IsEnabled="False"/>
+        <ComboBox x:Name="ddb_rotor1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="850,55,0,0" SelectedIndex="0" HorizontalContentAlignment="Center">
+            <ComboBoxItem Content="I" HorizontalContentAlignment="Center"/>
+            <ComboBoxItem Content="II" HorizontalContentAlignment="Center"/>
+            <ComboBoxItem Content="III" HorizontalContentAlignment="Center"/>
+        </ComboBox>
+        <ComboBox x:Name="ddb_rotor2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="992,55,0,0" SelectedIndex="1" HorizontalContentAlignment="Center">
+            <ComboBoxItem Content="I" HorizontalContentAlignment="Center"/>
+            <ComboBoxItem Content="II" HorizontalContentAlignment="Center"/>
+            <ComboBoxItem Content="III" HorizontalContentAlignment="Center"/>
+        </ComboBox>
+        <ComboBox x:Name="ddb_rotor3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="1124,55,0,0" SelectedIndex="2" HorizontalContentAlignment="Center">
+            <ComboBoxItem Content="I" HorizontalContentAlignment="Center"/>
+            <ComboBoxItem Content="II" HorizontalContentAlignment="Center"/>
+            <ComboBoxItem Content="III" HorizontalContentAlignment="Center"/>
+        </ComboBox>
+        <TextBox x:Name="txt_Encryption" HorizontalAlignment="Left" Height="35" Margin="1506,702,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="432" FontSize="18" FontWeight="Bold" IsReadOnly="True" MaxLines="1" Foreground="Black" IsEnabled="False">
+            <TextBox.SelectionBrush>
+                <ImageBrush/>
+            </TextBox.SelectionBrush>
+            <TextBox.CaretBrush>
+                <ImageBrush/>
+            </TextBox.CaretBrush>
+            <TextBox.BorderBrush>
+                <ImageBrush/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lbl_Encrypt" Content="Encyption:" HorizontalAlignment="Left" Margin="1402,702,0,0" VerticalAlignment="Top" Width="99" Foreground="Black" FontSize="20" FontWeight="Bold" FontFamily="Franklin Gothic Demi"/>
+        <RadioButton x:Name="rdo_Pluga" Content="A" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="692,754,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="a" Checked="rdo_Pluga_Checked"/>
+        <RadioButton x:Name="rdo_Plugb" Content="B" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="692,786,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="b" Checked="rdo_Plugb_Checked"/>
+        <RadioButton x:Name="rdo_PlugC" Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="692,816,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="c" Checked="rdo_PlugC_Checked"/>
+        <RadioButton x:Name="rdo_PlugD" Content="D" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="692,844,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="d" Checked="rdo_PlugD_Checked"/>
+        <RadioButton x:Name="rdo_PlugE" Content="E" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="692,872,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="e" Checked="rdo_PlugE_Checked"/>
+        <RadioButton x:Name="rdo_PlugF" Content="F" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="692,900,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="f" Checked="rdo_PlugF_Checked"/>
+        <RadioButton x:Name="rdo_PlugG" Content="G" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="692,928,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="g" Checked="rdo_PlugG_Checked"/>
+        <RadioButton x:Name="rdo_PlugH" Content="H" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="816,756,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="h" Checked="rdo_PlugH_Checked"/>
+        <RadioButton x:Name="rdo_PlugI" Content="I" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="816,786,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="i" Checked="rdo_PlugI_Checked"/>
+        <RadioButton x:Name="rdo_PlugJ" Content="J" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="816,816,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="j" Checked="rdo_PlugJ_Checked"/>
+        <RadioButton x:Name="rdo_PlugK" Content="K" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="816,844,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="k" Checked="rdo_PlugK_Checked"/>
+        <RadioButton x:Name="rdo_PlugL" Content="L" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="816,872,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="l" Checked="rdo_PlugL_Checked"/>
+        <RadioButton x:Name="rdo_PlugM" Content="M" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="816,900,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="m" Checked="rdo_PlugM_Checked"/>
+        <RadioButton x:Name="rdo_PlugN" Content="N" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="816,928,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="n" Checked="rdo_PlugN_Checked"/>
+        <RadioButton x:Name="rdo_PlugO" Content="O" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="943,756,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="o" Checked="rdo_PlugO_Checked"/>
+        <RadioButton x:Name="rdo_PlugP" Content="P" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="943,786,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="p" Checked="rdo_PlugP_Checked"/>
+        <RadioButton x:Name="rdo_PlugQ" Content="Q" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="943,816,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="q" Checked="rdo_PlugQ_Checked"/>
+        <RadioButton x:Name="rdo_PlugR" Content="R" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="943,844,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="r" Checked="rdo_PlugR_Checked"/>
+        <RadioButton x:Name="rdo_PlugS" Content="S" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="943,872,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="s" Checked="rdo_PlugS_Checked"/>
+        <RadioButton x:Name="rdo_PlugT" Content="T" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="943,900,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="t" Checked="rdo_PlugT_Checked"/>
+        <RadioButton x:Name="rdo_PlugU" Content="U" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="943,928,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="u" Checked="rdo_PlugU_Checked"/>
+        <RadioButton x:Name="rdo_PlugV" Content="V" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1059,756,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="v" Checked="rdo_PlugV_Checked"/>
+        <RadioButton x:Name="rdo_PlugW" Content="W" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1059,786,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="w" Checked="rdo_PlugW_Checked"/>
+        <RadioButton x:Name="rdo_PlugX" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1059,816,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="x" Checked="rdo_PlugX_Checked"/>
+        <RadioButton x:Name="rdo_PlugY" Content="Y" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1059,844,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="y" Checked="rdo_PlugY_Checked"/>
+        <RadioButton x:Name="rdo_PlugZ" Content="Z" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1059,872,0,0" Foreground="White" Background="Black" Height="34" Width="54" FontSize="18" FontWeight="Bold" GroupName="z" Checked="rdo_PlugZ_Checked"/>
+        <TextBox x:Name="txt_plugboard" HorizontalAlignment="Left" Height="35" Margin="1506,768,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="432" FontSize="18" FontWeight="Bold" IsReadOnly="True" MaxLines="1" Foreground="Black" IsEnabled="False">
+            <TextBox.SelectionBrush>
+                <ImageBrush/>
+            </TextBox.SelectionBrush>
+            <TextBox.CaretBrush>
+                <ImageBrush/>
+            </TextBox.CaretBrush>
+            <TextBox.BorderBrush>
+                <ImageBrush/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lbl_Encrypt_Copy" Content="Plugs:" HorizontalAlignment="Left" Margin="1402,768,0,0" VerticalAlignment="Top" Width="99" Foreground="Black" FontSize="20" FontWeight="Bold" FontFamily="Franklin Gothic Demi"/>
+        <Menu HorizontalAlignment="Left" Height="32" Margin="0,-2,0,0" VerticalAlignment="Top" Width="1970">
+            <MenuItem x:Name="Menu_Connection" Header="Connection" Click="Menu_Connection_Click_1"/>
+            <MenuItem x:Name="Menu_help" Header="Help" Click="Menu_help_Click"/>
+        </Menu>
+        <Rectangle HorizontalAlignment="Left" Height="633" Margin="0,416,0,0" Stroke="Black" VerticalAlignment="Top" Width="589">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="vintage paper.jpg" TileMode="Tile"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBox x:Name="txt_morse_Copy" HorizontalAlignment="Left" Height="35" Margin="144,579,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="413" FontSize="18" FontWeight="Bold" IsReadOnly="True" MaxLines="1" Foreground="Black" IsEnabled="False" Text=".--.--....--..--.--.--.-.---.--...-">
+            <TextBox.SelectionBrush>
+                <ImageBrush/>
+            </TextBox.SelectionBrush>
+            <TextBox.CaretBrush>
+                <ImageBrush/>
+            </TextBox.CaretBrush>
+            <TextBox.BorderBrush>
+                <ImageBrush/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lbl_morse_Copy" Content="Morse Code:" HorizontalAlignment="Left" Margin="21,579,0,0" VerticalAlignment="Top" Width="118" Foreground="Black" FontSize="20" FontWeight="Bold" FontFamily="Franklin Gothic Demi"/>
+        <TextBox x:Name="txt_Encryption_Copy" HorizontalAlignment="Left" Height="35" Margin="125,639,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="432" FontSize="18" FontWeight="Bold" IsReadOnly="True" MaxLines="1" Foreground="Black" IsEnabled="False" Text="pzudqyropu">
+            <TextBox.SelectionBrush>
+                <ImageBrush/>
+            </TextBox.SelectionBrush>
+            <TextBox.CaretBrush>
+                <ImageBrush/>
+            </TextBox.CaretBrush>
+            <TextBox.BorderBrush>
+                <ImageBrush/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lbl_Encrypt_Copy2" Content="Encyption:" HorizontalAlignment="Left" Margin="21,639,0,0" VerticalAlignment="Top" Width="99" Foreground="Black" FontSize="20" FontWeight="Bold" FontFamily="Franklin Gothic Demi"/>
+        <TextBox x:Name="txt_decryption_Copy" HorizontalAlignment="Left" Height="35" Margin="139,703,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontWeight="Bold" IsReadOnly="True" MaxLines="1" Foreground="Black" IsEnabled="False" Text="HELLOWORLD">
+            <TextBox.SelectionBrush>
+                <ImageBrush/>
+            </TextBox.SelectionBrush>
+            <TextBox.CaretBrush>
+                <ImageBrush/>
+            </TextBox.CaretBrush>
+            <TextBox.BorderBrush>
+                <ImageBrush/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lbl_Encrypt_Copy4" Content="Decryption:" HorizontalAlignment="Left" Margin="21,703,0,0" VerticalAlignment="Top" Width="118" Foreground="Black" FontSize="20" FontWeight="Bold" FontFamily="Franklin Gothic Demi"/>
+        <Button x:Name="btn_refresh" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Margin="1140,653,0,0" Height="40" FontSize="16" Background="Black" Foreground="White" BorderBrush="#FFB0B0B0" FontWeight="Bold" Click="btn_refresh_Click"/>
+        <Button x:Name="btn_reset" Content="Refresh" HorizontalAlignment="Left" Margin="482,498,0,0" VerticalAlignment="Top" Width="95" Click="Button_Click_1" Height="45" FontSize="16" FontWeight="Bold" VerticalContentAlignment="Center">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+
+    </Grid>
+</Controls:MetroWindow>
